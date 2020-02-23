@@ -34,8 +34,34 @@ public class Main {
         //replace a,e,i only if they are followed by F,j
         System.out.println(secondString.replaceAll("[aei][Fj]","X"));
 
+        System.out.println("harry".replaceAll("[Hh]arry", "Harry"));
 
-        System.out.println("Hello world");
+        //replace all elemets expect e and j
+        System.out.println(secondString.replaceAll("[^ej]", "X"));
+
+        //ranges
+        System.out.println(secondString.replaceAll("[abcdef345678]","X"));
+        System.out.println(secondString.replaceAll("[a-fA-F3-8]","X"));
+
+        //disable case senstivity
+        System.out.println(secondString.replaceAll("(?i)[a-f3-8]","X"));
+
+        //shortcuts to replace either all numbers or all letters
+        System.out.println(secondString.replaceAll("//d","X")); //numbers
+        System.out.println(secondString.replaceAll("//D","X")); //letters
+
+        //remove all white spaces
+        String hasWhitespace = "I have blanks and\ta tab, and also a newline\n";
+        System.out.println(hasWhitespace);
+        System.out.println(hasWhitespace.replaceAll("\\s", ""));
+        System.out.println(hasWhitespace.replaceAll("\t", "X"));
+        System.out.println(hasWhitespace.replaceAll("\\S", ""));
+        System.out.println(secondString.replaceAll("\\w", "X"));
+        System.out.println(hasWhitespace.replaceAll("\\w", "X"));
+        System.out.println(hasWhitespace.replaceAll("\\b", "X"));
+
+
+
 
 
     }
