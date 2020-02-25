@@ -47,11 +47,11 @@ public class Main {
         System.out.println(secondString.replaceAll("(?i)[a-f3-8]","X"));
 
         //shortcuts to replace either all numbers or all letters
-        System.out.println(secondString.replaceAll("//d","X")); //numbers
-        System.out.println(secondString.replaceAll("//D","X")); //letters
+        System.out.println(secondString.replaceAll("\\d","X")); //numbers
+        System.out.println(secondString.replaceAll("\\D","X")); //letters
 
         //remove all white spaces
-        String hasWhitespace = "I have blanks and\ta tab, and also a newline\n";
+        String hasWhitespace = "I have blanks and\ta tab_ and also a newline\n";
         System.out.println(hasWhitespace);
         System.out.println(hasWhitespace.replaceAll("\\s", ""));
         System.out.println(hasWhitespace.replaceAll("\t", "X"));
